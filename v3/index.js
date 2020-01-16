@@ -20,13 +20,13 @@ function getKeyVaultSecret(credentials) {
 }
 
 app.get('/', function (req, res) {
-  getKeyVaultCredentials().then(
-    getKeyVaultSecret
-  ).then(function (secret){
-    res.send(`Your secret value is: ${secret.value}.`);
-  }).catch(function (err) {
-    res.send(err);
-  });
+  let credentials = getKeyVaultCredentials();
+  getKeyVaultSecret(credentials)
+    .then(function (secret) {
+      res.send(`Your secret value is: ${secret.value}.`);
+    }).catch(function (err) {
+      res.send(err);
+    });
 });
 
 let port = process.env.PORT || 3000;
