@@ -99,14 +99,15 @@ From the Azure Portal, go to the Key Vault's access policies, and grant yourself
 1.  Create a [Node.js Web App] in Azure.
 
 2.  Grant your Web App Secret Management access to the Key Vault.
-From the Azure Portal, go to the Key Vault's access policies, and grant your Web App **Secret Management** access to the Key Vault. This will allow you to run the application on your Web App.
 
-* On your Key Vault **Settings** pages, Select **Access policies**.
-* Click on **Add Access Policy**.
-* Set **Configure from template (optional)** to **Secret Management**.
-* Click on **Select Principal**, add your Web App's registration.
-* Click on **Add**.
-* Click on **Save** to save the Access Policies.
+    From the Azure Portal, go to the Key Vault's access policies, and grant your Web App **Secret Management** access to the Key Vault. This will allow you to run the application on your Web App.
+
+    * On your Key Vault **Settings** pages, Select **Access policies**.
+    * Click on **Add Access Policy**.
+    * Set **Configure from template (optional)** to **Secret Management**.
+    * Click on **Select Principal**, add your Web App's registration.
+    * Click on **Add**.
+    * Click on **Save** to save the Access Policies.
 
 3.  Set environment variables in the **Settings** > **Configuration** > **Application Settings** of your Web App. You can also change the value of the variables from `null` in the index.js file.
 
