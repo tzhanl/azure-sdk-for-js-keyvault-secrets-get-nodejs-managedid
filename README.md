@@ -98,7 +98,11 @@ From the Azure Portal, go to the Key Vault's access policies, and grant yourself
 ## Deploy this sample to Azure
 1.  Create a [Node.js Web App] in Azure.
 
-2.  Grant your Web App Secret Management access to the Key Vault.
+2.  Set environment variables in the **Settings** > **Configuration** > **Application Settings** of your Web App. You can also change the value of the variables from `null` in the index.js file.
+
+3.  Enable Managed Identity in the **Settings** > **Identity** > **System assigned** > **Status** > **On** of your Web App. 
+
+4.  Grant your Web App Secret Management access to the Key Vault.
 
     From the Azure Portal, go to the Key Vault's access policies, and grant your Web App **Secret Management** access to the Key Vault. This will allow you to run the application on your Web App.
 
@@ -109,9 +113,7 @@ From the Azure Portal, go to the Key Vault's access policies, and grant yourself
     * Click on **Add**.
     * Click on **Save** to save the Access Policies.
 
-3.  Set environment variables in the **Settings** > **Configuration** > **Application Settings** of your Web App. You can also change the value of the variables from `null` in the index.js file.
-
-4.  This repository is ready to be deployed using local git. Read this tutorial to get more information on [how to push using local git through portal].
+5.  [Deploy] V3/V4 to your Web App in Azure.
 
 ## Troubleshooting
 ### Common issues across environments:
@@ -138,7 +140,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct]. For more i
 [Node.js]: https://nodejs.org/en/download/
 [Git]: https://www.git-scm.com/
 [Node.js Web App]: https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-nodejs
-[how to push using local git through portal]: https://docs.microsoft.com/en-us/azure/app-service/app-service-deploy-local-git
+[Deploy]: https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-nodejs#deploy-using-azure-app-service
 [Microsoft Open Source Code of Conduct]: https://opensource.microsoft.com/codeofconduct/
 [Code of Conduct FAQ]: https://opensource.microsoft.com/codeofconduct/faq/
 [opencode@microsoft.com]: mailto:opencode@microsoft.com
